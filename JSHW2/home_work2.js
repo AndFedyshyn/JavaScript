@@ -170,8 +170,8 @@ console.log(aaaArr);
 
 let abc123 = ['a', 'b', 'c'];
 let summAbc = '';
-for (element of abc123) {
-        summAbc += element;
+for (i of abc123) {
+        summAbc += i;
 }
 console.log(summAbc);
 
