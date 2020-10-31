@@ -56,6 +56,7 @@ while (y<20 ){
 // Завдання 9- Створити масив з 10 числових елементів. Вивести в консоль всі його елементи в циклі.
 
 let arr=[11,22,33,44,555,6666,7777,8888,9999,3333];
+
 for (let i = 0; i < arr.length; i++) {
     console.log(arr[i]);
 }
@@ -104,7 +105,73 @@ arrr[6] = 'Bandera';
 arrr[7] = 2020;
 arrr[8] = 'Karpaty';
 arrr[9] = 'Hoverla';
-arrr[10] = 1990
+
 for (let i = 0; i < arrr.length-1; i++) {
     console.log(arrr[i]);
 }
+// Завдання 16 - Створити цикл for на 10  ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
+
+for (let i=0; i<10;i+=1){
+    console.log(i), document.write(i+'<br>');
+}
+// Завдання 17 - Створити цикл for на 100 ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write.
+
+for (let i=0; i<100;i+=1) {
+    console.log(i), document.write(i + '<br>');
+}
+// Завдання 18- Створити цикл for на 100 ітерацій з кроком 2. Вивести поточний номер кроку через console.log та document.write
+
+for (let i=0; i<100;i+=2) {
+    console.log(i), document.write(i + '<br>');
+}
+// Завдання 19- Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write.
+
+for(let i=0; i<100;i+=1) {
+    if (i % 2 === 0) {
+        console.log(i), document.write(i + '<br>');
+    }
+}
+// Завдання 20- Створити цикл for на 100 ітерацій. Вивести тільки непарні кроки. через console.log + document.write
+
+for(let i=0; i<100;i+=1) {
+    if (i % 2 === 1) {
+        console.log(i), document.write(i + '<br>');
+    }
+}
+
+// Завдання 21 - Відтворити роботу годинника, відрахувавши  2 години 20 хвилини (3 цикли! 1й - години, 2й - хвилини, 3й - секунди)
+
+///
+
+
+
+
+
+// Додатково
+// 1. - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for зібрати всі букви в слово.
+
+let abcArr = [ 'a', 'b', 'c'];
+let allArr = [];
+for (let i = 0; i < abcArr.length; i++) {
+    allArr += abcArr[i];
+}
+console.log(allArr);
+
+// 2. - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for зібрати всі букви в слово.
+
+let cccArr = [ 'a', 'b', 'c'];
+let aaaArr = [];
+let i=0;
+while (i < cccArr.length)
+{aaaArr = aaaArr+cccArr[i];i++}
+console.log(aaaArr);
+
+// 3. - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for of зібрати всі букви в слово.
+
+let abc123 = ['a', 'b', 'c'];
+let summAbc = '';
+for (element of abc123) {
+        summAbc += element;
+}
+console.log(summAbc);
+
