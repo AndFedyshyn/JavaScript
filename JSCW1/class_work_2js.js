@@ -144,4 +144,4 @@ console.log(parseInt('Вася')) // NaN
 
 let num77 = +prompt();
 let num88 = +prompt();
-let result =alert(num77+num88)
+alert(num77+num88);
