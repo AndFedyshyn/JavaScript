@@ -132,3 +132,16 @@ console.log(parseInt('-7.875')) //-7
 console.log(parseInt('435')) // 435
 console.log(parseInt('Вася')) // NaN
 
+// 12.  С помощью окна ввода, вызываемого методом prompt, пользователь может ввести данные, которые
+//будут использоваться далее, повторите код ниже
+// let str = prompt('Enter something')
+// console.log(str);
+
+
+
+// 13. С помощью окна ввода, вызываемого методом prompt, сделать сложение двух чисел,
+//а вывод результата при помощи метода alert
+
+let num77 = +prompt();
+let num88 = +prompt();
+let result =alert(num77+num88)
