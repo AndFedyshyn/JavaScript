@@ -180,3 +180,34 @@ console.log(users[5].age + ' ' + users[5].status);
 // - отримати весь список класів елемента з id=rules і вивести їх в console.log
 // - отримати всі елементи з класом fc_rules
 // - поміняти колір тексту у всіх елементів fc_rules на червоний
+
+const content = document.getElementById('content')
+console.log(content.innerText);
+
+const rules = document.getElementById('rules')
+console.log(rules.innerText);
+
+content.innerText = 'Conor Mc Gregor'
+rules.innerText = 'age 31'
+
+content.style.backgroundColor = 'red'
+rules.style.backgroundColor = 'red'
+ const ul = document.getElementsByClassName('fc_rules')
+for (const ulElement of ul) {
+    ulElement.style.backgroundColor = 'red'
+}
+content.style.color = 'blue'
+rules.style.color = 'blue'
+
+for (const ulElement of ul) {
+    ulElement.style.color = 'blue'
+}
+
+let ruleses = document.getElementById('rules')
+console.log(ruleses);
+
+let fc_rules = document.getElementsByClassName('fc_rules')
+for (const fcRule of fc_rules) {
+    console.log(fcRule);
+    fcRule.style.color = 'green'
+}
