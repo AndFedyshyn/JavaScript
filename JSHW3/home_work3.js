@@ -190,17 +190,17 @@ console.log(rules.innerText);
 content.innerText = 'Conor Mc Gregor'
 rules.innerText = 'age 31'
 
-content.style.backgroundColor = 'red'
-rules.style.backgroundColor = 'red'
+content.style.backgroundColor = 'blue'
+rules.style.backgroundColor = 'blue'
  const ul = document.getElementsByClassName('fc_rules')
 for (const ulElement of ul) {
-    ulElement.style.backgroundColor = 'red'
+    ulElement.style.backgroundColor = 'yellow'
 }
-content.style.color = 'blue'
-rules.style.color = 'blue'
+content.style.color = 'red'
+rules.style.color = 'red'
 
 for (const ulElement of ul) {
-    ulElement.style.color = 'blue'
+    ulElement.style.color = 'red'
 }
 
 let ruleses = document.getElementById('rules')
