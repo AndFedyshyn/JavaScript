@@ -16,7 +16,7 @@ function random(x) {
     }
     return conArr(a);
 }
-randomArray = random(20);
+contArr = random(20);
 
 // 3.- створити функцію яка приймає три числа та виводить та повертає найменьше.
 
