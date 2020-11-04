@@ -63,3 +63,40 @@ function arrayConsole(array) {
 arrayConsole([2020, 2021,2022,2023,2024]);
 
 // 7.- створити функцію яка повертає найбільше число з масиву.
+
+function getMaxNum(myArr=[]){
+    let max = myArr[0];
+    for(let i=0;i < myArr.length; i++){
+       if(myArr[i] > max){
+           max = myArr[i];
+       }
+    }
+    console.log(max);
+    return max;
+
+}
+getMaxNum([8, 25, 4588, 1000000, 184, 11, 22]);
+
+
+// let getMaxNum1 = (arr) => Math.max(...arr)
+// console.log(getMaxNum1([8, 25, 4588, 10000000, 184, 11, 22]));
+
+
+// 8.- створити функцію яка повертає найменьше число з масиву.
+
+function getMinNum(myArr2 = []) {
+    let min = myArr2[0];
+    for(let i=0; i < myArr2.length; i++){
+        if(myArr2[i] < min){
+            min = myArr2[i];
+        }
+    }
+    console.log(min);
+    return min;
+}
+
+getMinNum([8, 25, 4588, 1000000, 184, 11, 22]);
+
+// let getMinNum1 = (arr) => Math.min(...arr)
+// console.log(getMinNum1([8, 25, 4588, 10000000, 184, 11, 22]));
+
