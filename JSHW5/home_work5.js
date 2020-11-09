@@ -174,7 +174,7 @@ const car = {
     drive: function(){console.log(`їдемо зі швидкістю ${this.max_speed} км на годину`)
     },
     info: function(){console.log(`Модель: ${this.model}, Країна виробник:${this.country}, 
-    Рiк випуску:${this.year}, Максимальна швидкість:${this.max_speed}, Об'єм двигуна :${this.engine}`)
+    Рiк випуску:${this.year}, Максимальна швидкість:${this.max_speed}, Обєм двигуна :${this.engine}`)
     },
 
     increaseMaxSpeed: function(newSpeed){
@@ -197,3 +197,47 @@ car.increaseMaxSpeed(10)
 car.changeYear(2020)
 car.addDriver ({name: 'Andrii'});
 console.log(car)
+
+
+// ==============================================
+//    - Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник,
+//     рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
+// -- drive () - яка виводить в консоль "їдемо зі швидкістю {максимальна швидкість} на годину"
+// -- info () - яка виводить всю інформацію про автомобіль
+// -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
+// -- changeYear (newValue) - змінює рік випуску на значення newValue
+// -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
+// ==============================================
+
+
+function Cars( model, country, year, max_speed, engine ){
+    this.model = model;
+    this.country = country;
+    this.year = year;
+    this.max_speed = max_speed;
+    this.engine = engine;
+
+    this.drive = function (){ console.log(`їдемо зі швидкістю ${this.max_speed} на годину`)};
+    this.info = function(){ console.log(`Модель: ${this.model},Країна виробник:${this.country}, 
+    Рiк випуску:${this.year}, Максимальна швидкість:${this.max_speed}, Обєм двигуна :${this.engine}`)};
+
+    this.increaseMaxSpeed = function(newSpeed){
+        this.max_speed=newSpeed;
+        console.log(`${this.max_speed}`)
+    }
+    this.changeYear = function(newValue){
+        this.year=newValue;
+        console.log(`${this.year}`)
+    }
+    this.addDriver = function (driver){this.driver = driver
+        console.log(`${this.driver}`)
+    }
+}
+
+let lambo = new Cars ( 'Lamborghini', 'Urus','2020','305','V8 4.0 FSI');
+
+lambo.drive()
+lambo.info()
+lambo.increaseMaxSpeed('Max city speed: 50')
+lambo.changeYear('License to: 2022')
+lambo.addDriver('Driver: Andrii')
