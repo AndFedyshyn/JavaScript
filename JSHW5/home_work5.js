@@ -234,10 +234,58 @@ function Cars( model, country, year, max_speed, engine ){
     }
 }
 
-let lambo = new Cars ( 'Lamborghini', 'Urus','2020','305','V8 4.0 FSI');
+const lambo = new Cars ( 'Lamborghini Urus', 'Italy','2020','305','V8 4.0 FSI');
 
 lambo.drive()
 lambo.info()
 lambo.increaseMaxSpeed('Max city speed: 50')
 lambo.changeYear('License to: 2022')
 lambo.addDriver('Driver: Andrii')
+
+
+// // ==============================================
+// // - Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, обєм двигуна. додати в обєкт функції:
+// // -- drive () - яка виводить в консоль "їдемо зі швидкістю {максимальна швидкість} на годину"
+// // -- info () - яка виводить всю інформацію про автомобіль
+// // -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
+// // -- changeYear (newValue) - змінює рік випуску на значення newValue
+// // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
+// // ==============================================
+
+
+class Car3 {
+    constructor (model, country, year, max_speed, engine){
+        this.model = model;
+        this.country = country;
+        this.year = year;
+        this.max_speed = max_speed;
+        this.engine = engine;
+    };
+
+    drive (){console.log(`їдемо зі швидкістю ${this.max_speed} км на годину`)};
+    info (){console.log(`Модель: ${this.model},Країна виробник:${this.country}, 
+    Рiк випуску:${this.year}, Максимальна швидкість:${this.max_speed}, Обєм двигуна :${this.engine}`)
+    };
+
+    increaseMaxSpeed (newSpeed){
+        this.max_speed=newSpeed;
+        console.log(`${this.max_speed}`)
+    }
+
+    changeYear (newValue){
+        this.year=newValue;
+        console.log(`${this.year}`)
+    }
+
+    addDriver (driver){this.driver = driver
+        console.log(`${this.driver.name},${this.driver.year}`)
+    }
+}
+
+const nissan = new Car3 ( 'Nissan Rouge ', 'Japan', 2019, 230, 2.5 )
+
+nissan.drive()
+nissan.info()
+nissan.increaseMaxSpeed(100)
+nissan.changeYear(2017)
+nissan.addDriver({name:'Andrii', year: 1990})
