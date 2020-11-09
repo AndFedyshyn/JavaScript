@@ -163,3 +163,37 @@ const tagSelect1 = new Tag('select','позволяет создать элем�
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
 // ==============================================
 
+
+const car = {
+    model: 'BMW X6',
+    country: 'Germany',
+    year: 2018,
+    max_speed: 250,
+    engine: '3.0L I6 24V GDI DOHC Turbo',
+
+    drive: function(){console.log(`їдемо зі швидкістю ${this.max_speed} км на годину`)
+    },
+    info: function(){console.log(`Модель: ${this.model}, Країна виробник:${this.country}, 
+    Рiк випуску:${this.year}, Максимальна швидкість:${this.max_speed}, Об'єм двигуна :${this.engine}`)
+    },
+
+    increaseMaxSpeed: function(newSpeed){
+        this.max_speed+=newSpeed;
+        console.log(`${this.max_speed}`)
+    },
+    changeYear: function(newValue){
+        this.year=newValue;
+        console.log(`${this.year}`)
+    },
+    addDriver: function (driver){
+        this.driver = driver
+        console.log(`${this.driver.name}`)
+    },
+}
+
+car.drive()
+car.info()
+car.increaseMaxSpeed(10)
+car.changeYear(2020)
+car.addDriver ({name: 'Andrii'});
+console.log(car)
