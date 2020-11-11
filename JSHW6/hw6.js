@@ -97,13 +97,18 @@ console.log(sortUs2);
 // - пройтись по ньому та додати кожному юзеру поле id - яке характеризує унікальний індентифікатор
 // (По якому принципу його створювати - ваше рішення), та зберегти це в новий масив (первинний масив залишиться без змін)
 
+let usersJSONid = JSON.stringify(users)
+let usersID = JSON.parse(usersJSONid)
 
-
-
+usersID.map((item, index)=> item.id = index + 1)
+console.log(usersID)
 
 // - відсортувати його за індентифікатором
-//
-//
+
+let usersJSONid2 = JSON.stringify(usersID)
+let usersID2 = JSON.parse(usersJSONid2)
+console.log(usersID2.sort((a, b) => b.id - a.id));
+
 // -- наисать функцию калькулятора с 2мя числами и колбеком
 // -- наисать функцию калькулятора с 3мя числами и колбеком
 //
