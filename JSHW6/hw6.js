@@ -25,7 +25,7 @@ console.log(filter10)
 
 // -- перебрать (проитерировать) массив при помощи foreach()
 
-array20.forEach(console.log)
+array20.forEach((value, index, array) => console.log(value, index, array));
 
 // -- перебрать массив при помощи map() и получить новый массив в котором все значения будут в 3 раза больше
 
