@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW7</title>
+</head>
+
+
+<body>
+
+<style>
+    #menu {
+        width: 400px;
+        height: 50px;
+        background-color: chartreuse;
+        border: 2px solid black;
+        text-align: center;
+    }
+
+    #mainMenu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .dropDownMenu {
+        width: 400px;
+        border: 1px solid black;
+        margin-top: 13px;
+        text-align: center;
+        display: none;
+    }
+
+    .dropDownMenu>div {
+        border: 1px solid black;
+    }
+
+
+</style>
+
+<form name="search">
+
+    <button name="send" value="22">send</button>
+    <input type="text" name="age" id="textAge" value="">
+    <input type="submit" name="button" value="send my age">
+
+
+</form>
+
+<input type="text" id="age">
+
+<button id="btn-age">Enter</button>
+
+<div id="mainMenu">
+    <div id="menu">
+        <h2>Menu</h2>
+
+        <div class="dropDownMenu">
+            <div>Menu1</div>
+            <div>Menu2</div>
+            <div>Menu3</div>
+        </div>
+
+    </div>
+</div>
+<!--<div id="menu">-->
+
+<!--    <div class="dropDownMenu">-->
+<!--        <div>Menu1</div>-->
+<!--        <div>Menu2</div>-->
+<!--        <div>Menu3</div>-->
+<!--    </div>-->
+
+<!--</div>-->
+<button id="btnNoth">NOTHING</button>
+
+<script src="hw7.js"></script>
+</body>
+</html>
