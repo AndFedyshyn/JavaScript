@@ -67,3 +67,48 @@
 //
 //      });
 
+// - створити 2 форми  по 2 інпути в кожній. ствоирити кнопку при кліку на яку считується та виводиться на консоль інформація з цих 2х форм.
+//     Кнопка повинна лежати за межами форм (Щоб ьуникнути  перезавантаження сторінки)
+// Доступ до інпутів через Forms API. Отже дайте формі та інпутам всі необхідні атрибути.
+
+// const btn = document.getElementById('btn');
+// const input1 = document.getElementById('input1');
+// const input2 = document.getElementById('input2');
+// const input21 = document.getElementById('input21');
+// const input22 = document.getElementById('input22');
+
+// btn.onclick =  ev => {
+// //     console.log(input1.value);
+// //     console.log(input2.value);
+// //     console.log(input21.value);
+// //     console.log(input22.value);
+// // }
+//     console.log(document.forms.form1.input1.value);
+//     console.log(document.forms.form1.input2.value);
+//     console.log(document.forms.form2.input21.value);
+//     console.log(document.forms.form2.input22.value);
+//
+// }
+
+
+// - Створити функцію, яка генерує таблицю.
+//     Перший аргумент визначає кількість строк.
+//     Другий параметр визначає кліькіть ячеєк в кожній строці.
+//     Третій параметр визначає елемент в який потрібно таблицю додати
+
+const content = document.getElementById('btn');
+function createTable(rows,cols,tag) {
+    const table = document.createElement('table');
+    for (let i = 0; i < rows; i++) {
+        const tr = document.createElement('tr');
+        for (let j = 0; j < cols; j++) {
+            const td = document.createElement('td');
+            td.innerText = i +' '+j;
+            tr.appendChild(td);
+        }
+        table.appendChild(tr);
+    }
+    tag.appendChild(table);
+
+}
+createTable(4,5,content)
