@@ -6,10 +6,37 @@
 </head>
 <body>
 
-<textarea name="text" id="textarea" cols="30" rows="10"></textarea>
+
+<!--<textarea name="text" id="textarea" cols="30" rows="10"></textarea>-->
 
 
+<fieldset>
+    <legend>My form</legend>
+<form id="form" oninput="saveForm(this)">
+
+    <textarea name="area1" id="area1" cols="30" rows="10"> </textarea>
+
+        <input type="text" name="input1" id="input1">
+        <input type="number" name="input2" id="input2">
+        <input type="checkbox" name="check" id="check" value="false">
+        <input type="radio" name="radio" id="radio1" value="false">
+        <input type="radio" name="radio" id="radio2" value="false">
+
+        <select name="select" id="select_choice">
+
+            <option value="just_choice">--Зробіть вибір--</option>
+            <option value="best_choice">Кращий вибір</option>
+            <option value="newest">Новинки</option>
+            <option value="expensive">Від найдорожчих</option>
+            <option value="cheapest">Від найдешевших</option>
+
+        </select>
+
+</form>
+
+</fieldset>
 
 <script src="HW8.js"></script>
+
 </body>
 </html>
